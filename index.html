@@ -263,15 +263,21 @@
         selectedDollar = 0;
         cards.forEach((c) => c.classList.remove("active"));
         updateButton();
-      });
-         const btnClose = document.getElementById("btnClose");
+        
+       const btnClose = document.getElementById("btnClose");
 
         btnClose.addEventListener("click", () => {
-          history.back();
+        window.close();
+
+          // Fallback jika browser menolak window.close()
+        setTimeout(() => {
+        window.location.href = "about:blank";
+        }, 100);
       });
     </script>
   </body>
 </html>
+
 
 
 
