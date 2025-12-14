@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tukar koin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        background-color: #f5f5f5;
+      } 
+      .coin-card {
+        border: 2px solid #e5e7eb;
+        border-radius: 12px;
+        padding: 16px;
+        text-align: center;
+        cursor: pointer;
+        background-color: #ffffff; 
+        transition: all 0.2s ease;
+      } 
+      .coin-card.active {
+        border-color: #f43f5e; 
+        background-color: #ffffff;       
+    }
+    </style>
+  </head>
+  <body class="flex justify-center items-start min-h-screen">
+    <div class="w-full max-w-md bg-white min-h-screen relative shadow-xl">
+      <div class="flex items-center justify-between px-4 h-14 border-b">
+        <button class="text-xl">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M15.75 19.5L8.25 12l7.5-7.5"
+            />
+          </svg>
+        </button>
+        <h1 class="font-semibold text-lg">Saldo</h1>
+        <button class="w-6"></button>
+      </div>
+      <div class="p-4 space-y-4">
+        <input
+          id="username"
+          type="text"
+          placeholder="Masukkan username anda"
+          class="w-full border rounded-lg px-3 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-rose-500 focus:border-rose-500 transition-colors"
+        />
+        <div class="flex items-center text-sm text-gray-500">
+          <span>Tersedia:</span>
+          <div id="saldoDollar" class="text-gray-500 text-sm">$300.00</div>
+          <span class="m1-1">(</span>
+          <img
+            src="https://raw.githubusercontent.com/mnjaulhaq/asset_coin/refs/heads/main/Grey_Modern_Size_Chart_Instagram_Post_1_-removebg-preview.png"
+            class="w-5 h-5"
+          />
+          <span id="saldoCoin">100.000</span>
+           <span>)</span>
+        </div>
+        <div class="grid grid-cols-2 gap-3 mt-4">
+          <div class="coin-card" data-dollar="0.60" data-coin="200">
+            <div
+              class="flex justify-center items-center gap-1 text-xl font-bold text-gray-800"
+            >
+              <img
+                src="https://raw.githubusercontent.com/mnjaulhaq/asset_coin/refs/heads/main/Grey_Modern_Size_Chart_Instagram_Post_1_-removebg-preview.png"
+                class="w-5 h-5"
+              />
+              200
+            </div>
+            <div class="text-gray-500 text-sm">$0.60</div>
+          </div>
+          <div class="coin-card" data-dollar="0.90" data-coin="300">
+            <div
+              class="flex justify-center items-center gap-1 text-xl font-bold text-gray-800"
+            >
+              <img
+                src="https://raw.githubusercontent.com/mnjaulhaq/asset_coin/refs/heads/main/Grey_Modern_Size_Chart_Instagram_Post_1_-removebg-preview.png"
+                class="w-5 h-5"
+              />
+              300
+            </div>
+            <div class="text-gray-500 text-sm">$0.90</div>
+          </div>
+          <div class="coin-card" data-dollar="1.50" data-coin="500">
+            <div
+              class="flex justify-center items-center gap-1 text-xl font-bold text-gray-800"
+            >
+              <img
+                src="https://raw.githubusercontent.com/mnjaulhaq/asset_coin/refs/heads/main/Grey_Modern_Size_Chart_Instagram_Post_1_-removebg-preview.png"
+                class="w-5 h-5"
+              />
+              500
+            </div>
+            <div class="text-gray-500 text-sm">$1.50</div>
+          </div>
+          <div class="coin-card" data-dollar="3.00" data-coin="1000">
+            <div
+              class="flex justify-center items-center gap-1 text-xl font-bold text-gray-800"
+            >
+              <img
+                src="https://raw.githubusercontent.com/mnjaulhaq/asset_coin/refs/heads/main/Grey_Modern_Size_Chart_Instagram_Post_1_-removebg-preview.png"
+                class="w-5 h-5"
+              />
+              1.000
+            </div>
+            <div class="text-gray-500 text-sm">$3.00</div>
+          </div>
+          <div class="coin-card" data-dollar="6.00" data-coin="2000">
+            <div
+              class="flex justify-center items-center gap-1 text-xl font-bold text-gray-800"
+            >
+              <img
+                src="https://raw.githubusercontent.com/mnjaulhaq/asset_coin/refs/heads/main/Grey_Modern_Size_Chart_Instagram_Post_1_-removebg-preview.png"
+                class="w-5 h-5"
+              />
+              2.000
+            </div>
+            <div class="text-gray-500 text-sm">$6.00</div>
+          </div>
+          <div class="coin-card" data-dollar="18.00" data-coin="6000">
+            <div
+              class="flex justify-center items-center gap-1 text-xl font-bold text-gray-800"
+            >
+              <img
+                src="https://raw.githubusercontent.com/mnjaulhaq/asset_coin/refs/heads/main/Grey_Modern_Size_Chart_Instagram_Post_1_-removebg-preview.png"
+                class="w-5 h-5"
+              />
+              6.000
+            </div>
+            <div class="text-gray-500 text-sm">$18.00</div>
+          </div>
+        </div>
+      </div>
+      <div class="absolute bottom-0 w-full p-4 bg-white space-y-3 border-t">
+        <p class="text-xs text-gray-500 leading-relaxed">
+          Koin yang didapatkan melalui pertukaran ini tunduk pada
+          <span class="font-medium">Kebijakan Item Virtual</span> kami.
+        </p>
+        <button
+          id="btnKirim"
+          disabled
+          class="w-full py-3 text-lg font-semibold text-white bg-rose-500 rounded-xl mt-6 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-rose-600 transition-colors"
+        >
+          Kirim
+        </button>
+      </div>
+    </div>
+    <script>
+      let saldoCoin = 100000;
+      let saldoDollar = 300.0;
+
+      const RATE_KOIN_PER_DOLLAR = saldoCoin / saldoDollar;
+
+      let selectedCoin = 0;
+      let selectedDollar = 0;
+
+      const saldoDollarEl = document.getElementById("saldoDollar");
+      const saldoCoinEl = document.getElementById("saldoCoin");
+      const usernameInput = document.getElementById("username");
+      const btnKirim = document.getElementById("btnKirim");
+      const cards = document.querySelectorAll(".coin-card");
+
+      function formatDollar(num) {
+        return `$${num.toFixed(2)}`;
+      }
+
+      function updateSaldoDisplay() {
+        saldoCoinEl.textContent = saldoCoin.toLocaleString("id-ID");
+        saldoDollarEl.textContent = formatDollar(saldoDollar);
+      }
+
+      function updateButton() {
+        btnKirim.disabled = !(usernameInput.value.trim() && selectedCoin > 0);
+      }
+
+      updateSaldoDisplay();
+
+      cards.forEach((card) => {
+        card.addEventListener("click", () => {
+          cards.forEach((c) => c.classList.remove("active"));
+          card.classList.add("active");
+
+          selectedCoin = parseInt(card.dataset.coin);
+
+          selectedDollar = selectedCoin / RATE_KOIN_PER_DOLLAR;
+
+          updateButton();
+        });
+      });
+
+      usernameInput.addEventListener("input", updateButton);
+
+      btnKirim.addEventListener("click", () => {
+        if (saldoCoin < selectedCoin || saldoDollar < selectedDollar) {
+          alert("Saldo tidak cukup");
+          return;
+        }
+
+        saldoCoin -= selectedCoin;
+        saldoDollar -= selectedDollar;
+
+        updateSaldoDisplay();
+        alert("Transaksi Berhasil✅");
+
+        // Reset
+        selectedCoin = 0;
+        selectedDollar = 0;
+        cards.forEach((c) => c.classList.remove("active"));
+        updateButton();
+      });
+    </script>
+  </body>
+</html>
