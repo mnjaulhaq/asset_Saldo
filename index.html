@@ -27,7 +27,7 @@
   <body class="flex justify-center items-start min-h-screen">
     <div class= "w-full max-w-md bg-white h-screen flex flex-col shadow-xl">
       <div class="flex items-center justify-between px-4 h-14 border-b">
-        <button class="text-xl">
+        <button id="btnClose" class="text-xl">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -264,6 +264,17 @@
         cards.forEach((c) => c.classList.remove("active"));
         updateButton();
       });
+         const btnClose = document.getElementById("btnClose");
+
+        btn Close.addEventListener("click", () => {
+        window.close();
+
+          // Fallback jika browser menolak window.close()
+        setTimeout(() => {
+        window.location.href = "about:blank";
+        }, 100);
+      });
     </script>
   </body>
 </html>
+
