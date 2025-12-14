@@ -267,15 +267,11 @@
          const btnClose = document.getElementById("btnClose");
 
         btnClose.addEventListener("click", () => {
-        window.close();
-
-          // Fallback jika browser menolak window.close()
-        setTimeout(() => {
-        window.location.href = "about:blank";
-        }, 100);
+          history.back();
       });
     </script>
   </body>
 </html>
+
 
 
